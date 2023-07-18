@@ -1,4 +1,4 @@
-#include "main.h"
+#include <unistd.h>
 /**
  * main - Entry point
  *
@@ -6,14 +6,11 @@
  */
 int main(void)
 {
-_putchar('_');
-_putchar('p');
-_putchar('u');
-_putchar('t');
-_putchar('c');
-_putchar('h');
-_putchar('a');
-_putchar('r');
-_putchar('\n');
+char text[] = "_putchar\n";
+int i;
+for (i = 0; text[i] != '\0'; i++)
+{
+write(1, &text[i], 1);
+}
 return (0);
 }
